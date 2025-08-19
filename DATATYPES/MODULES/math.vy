@@ -29,12 +29,17 @@ A .vy file (a module) can contain:
 # reusable storage variable
 password: uint256
 
+# initializer
+@deploy
+def __init__():
+    self.password = self.password
+
 # reusable function
-@internal
+@external
 def times_two(a: uint256) -> uint256:
     return a * 2
 
 # another reusable function
-@internal
+@pure
 def addition(b: uint256, c: uint256) -> uint256:
     return b + c
