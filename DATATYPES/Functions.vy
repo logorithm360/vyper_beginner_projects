@@ -12,9 +12,9 @@
 THIS PROJECT WILL DEMONSTRATE HOW @internal AND @external WORK:
 -It will take a name from a user then modify it so that the user can retrieve it
 """
-name: String[10] # this is a name variable
-modified_name: public(String[30]) # this is a modified name
-current_name: String[10]
+name: String[50] # this is a name variable
+modified_name: public(String[100]) # this is a modified name
+current_name: String[100]
 
 
 @deploy
@@ -37,12 +37,13 @@ def modifyit():
 
 # external function
 @external
-def get_name() -> String[30]:   
-    empty_name: String[30] = "Please Enter your name"
+# this is the funtion that takes the concatination so, the number of strings returned must be larger than the returned
+def get_name() -> String[100]:   
+    empty_name: String[50] = "null, please Enter your name!"
 
     self.modifyit() # returns the current name 
     if self.name == " ":
-        self.modified_name = empty_name
+        self.name = empty_name
     else:
         pass
     return self.modified_name
