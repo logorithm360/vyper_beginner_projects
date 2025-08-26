@@ -27,6 +27,18 @@ Performance: It is more gas-efficient than dynamic types because its size is kno
 | `bytes`    | Dynamic   | Yes      |
 
 
+IMPORTANT NOTES:
+
+Assignment must march the exact size:
+x: bytes4 = 0x12345678  # ✅ OK
+x = 0x1234              # ❌ Error (wrong size)
+
+
+bytesM size is locked at compile time
+When working with external contracts or ABI encoding:
+bytes4 → function selectors.
+bytes32 → hashed values (e.g., mapping keys, commitments).
+
 """
 
 hash: bytes32
@@ -34,8 +46,8 @@ some_method_id: bytes4
 # initialization
 @deploy
 def __init__():
-    self.hash = self.hash
-    self.some_method_id: bytes4 = 0x01abcdef
+    self.hash = 0x0000000000000000000000000000000000000000000000000000000000000000
+    self.some_method_id = 0xa9059cbb
 
 
 # bytes32 is commonly used for:
