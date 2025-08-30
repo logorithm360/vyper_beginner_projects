@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"PROJECTS/buy_me_coffee/hello.sol": "hello"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"PROJECTS/buy_me_coffee/hello.sol": {
+			"keccak256": "0xf461a6f590ef5330e5aca7a8bb2a7287956f8851b129ff087ec5de7fa1b832c6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6e401461f29d1a86bfb7eee74aee1fe7af08c80fa0b88deb638a187a7a10eb2b",
+				"dweb:/ipfs/QmSk49ypLhPnWF6PMdbYfqcy7h2m6fM5WZYDyZ7yhvjLWJ"
+			]
+		}
+	},
+	"version": 1
+}
